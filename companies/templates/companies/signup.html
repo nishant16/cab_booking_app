@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="signup/", method="post">
+    {% csrf_token %}
+    username:<br>
+  <input type="text" name="username" value="" required><br>
+  firstname:<br>
+  <input type="text" name="firstname" value="" required><br>
+    lastname:<br>
+  <input type="text" name="lastname" value="" required><br>
+    email:<br>
+  <input type="text" name="email" value="" required>
+  <br>
+  password1:<br>
+  <input type="text" name="password" value="" required><br>
+    password2:<br>
+  <input type="text" name="password_confirm" value="" required>
+  <br><br>
+  <input type="submit" value="Submit" required>
+</form>
+{% if errors %}
+    {% for error in errors %}
+        {{ error }}
+    {% endfor %}
+{% endif %}
+</body>
+</html>

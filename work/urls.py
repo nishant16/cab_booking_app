@@ -19,7 +19,7 @@ from companies import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^', include('companies.urls')),
+    url(r'^', include('companies.urls')),
     # url(r'^cablist', views.CabList.as_view()),
     url(r'^api/', include('companies.api.urls')),
 
