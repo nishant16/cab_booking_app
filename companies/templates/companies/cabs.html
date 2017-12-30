@@ -1,0 +1,6 @@
+
+{% for cab in cabs%}
+<li>
+    <a href="{% url 'cab_driver' cab.id %}">{{cab}}</a>
+</li>
+{% endfor %}

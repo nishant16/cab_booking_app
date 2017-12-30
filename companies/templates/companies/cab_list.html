@@ -1,0 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<input class="cab" type="submit" value="show cabs">
+<script type="text/javascript">
+$('.cab').click(function(){
+debugger;
+$.ajax({
+    url: '127.0.0.1:8000/api/cabs',
+    type: 'GET', // This is the default though, you don't actually need to always mention it
+    success: function(data) {
+        alert(data);
+    },
+    failure: function(data) {
+        alert('Got an error dude');
+    }
+});
+});
+</script>
